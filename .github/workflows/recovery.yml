@@ -2,34 +2,34 @@ name: 'Recovery Builder'
 on:
   workflow_dispatch:
     inputs:
-      manifest:
+      manifest:git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-11.0
         description: 'Recovery Manifest URL with -b branch'
         required: true
-      vendor:
+      vendor:lenovo
         description: 'Device Company / OEM / Vendor, i.e., xiaomi'
         required: true
-      codename:
+      codename:doom
         description: 'Device Codename i.e rosy'
         required: true
-      dt_link:
+      dt_link:https://github.com/jbhacktheplanet/lenovo_doom
         description: 'Device Tree link, with optional -b branch'
         required: true
       kernel_link:
         description: 'Kernel repo link with optional -b branch, Use if not prebuilt'
         required: false
-      req_qcom_commonsys:
+      req_qcom_commonsys:true
         description: 'If require QCOM commonsys, set this to true, i.e., SHRP needs this'
         required: true
         default: 'false'
-      cryptfs_fix:
+      cryptfs_fix:true
         description: 'If require to fix cryptfs_hw conflict, set this to true'
         required: true
         default: 'false'
-      target:
+      target:bootimage
         description: 'Build Target, i.e., recoveryimage'
         required: true
         default: 'recoveryimage'
-      flavor:
+      flavor:eng
         description: 'Build flavor, i.e., userdebug or eng'
         required: true
         default: 'eng'
