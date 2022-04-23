@@ -2,7 +2,7 @@ name: 'Recovery Builder'
 on:
   workflow_dispatch:
     inputs:
-      manifest:git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-11.0
+      manifest:https://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-11.0
         description: 'Recovery Manifest URL with -b branch'
         required: true
       vendor:lenovo
